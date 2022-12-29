@@ -1,0 +1,91 @@
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#table_course {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#table_course th {
+  font-size: 14px;
+}
+
+#table_course th, #table_course td {
+  text-align: left;
+  padding: 5px;
+}
+
+
+
+
+#table_course tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#table_course tr.header, #table_course tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+#table_course .hidden, .department, .building, .credit_unit, .language, .extra_enrollment, .course_level, .filter_course {
+  display: none;
+}
+
+#table_course .Monday, .M1, .M2, .M3, .M4, .M5, .M6, .M7, .M8, .M9, .Ma, .Mb, .Mc {
+  display: none;
+}
+
+#table_course .Tuesday, .T1, .T2, .T3, .T4, .T5, .T6, .T7, .T8, .T9, .Ta, .Tb, .Tc {
+  display: none;
+}
+
+#table_course .Wednesday, .W1, .W2, .W3, .W4, .W5, .W6, .W7, .W8, .W9, .Wa, .Wb, .Wc {
+  display: none;
+}
+
+#table_course .Thursday, .R1, .R2, .R3, .R4, .R5, .R6, .R7, .R8, .R9, .Ra, .Rb, .Rc {
+  display: none;
+}
+
+#table_course .Friday, .F1, .F2, .F3, .F4, .F5, .F6, .F7, .F8, .F9, .Fa, .Fb, .Fc {
+  display: none;
+}
+
+#table_course .Saturday, .S1, .S2, .S3, .S4, .S5, .S6, .S7, .S8, .S9, .Sa, .Sb, .Sc {
+  display: none;
+}
+
+
+#table_course .table_memo td {
+    text-align: left;
+    padding: 0px;
+}
+
+
+#header_info, #header_info td {
+    text-align: left;
+    padding: 0px;
+}
+
+
+#table_course .info td {
+    text-align: left;
+    padding: 0px;
+}
