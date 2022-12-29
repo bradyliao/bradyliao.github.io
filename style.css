@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-#myInput {
+/* #myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-}
+} */
 
 #table_course {
   border-collapse: collapse;
