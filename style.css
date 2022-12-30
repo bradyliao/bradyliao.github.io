@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-/* #myInput {
+#myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-} */
+}
 
 #table_course {
   border-collapse: collapse;
@@ -20,12 +20,20 @@
   border: 1px solid #ddd;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
+  /* overflow-y: auto; */
 }
 
+
+#table_course thead tr {
+    position: sticky; /* make the table heads sticky */
+    top: 0px; /* table head will be placed from the top of the table and sticks to it */
+}
 
 #table_course th {
   font-size: 14px;
 }
+
+
 
 #table_course th, #table_course td {
   text-align: left;
@@ -44,7 +52,7 @@
 }
 
 
-#table_course .hidden, .department, .building, .credit_unit, .language, .extra_enrollment, .course_level, .filter_course {
+#table_course .hidden, .department, .building, .credit_unit, .language, .extra_enrollment, .course_level, .filter_course, .instructor {
   display: none;
 }
 
