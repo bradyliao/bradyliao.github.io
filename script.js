@@ -12,12 +12,33 @@ function checkbox_all(source)
     {
         checkboxes[i].checked = source.checked;
     }
+    
+    if (document.getElementById("CheckboxMonday").checked == true && document.getElementById("CheckboxTuesday").checked == true && document.getElementById("CheckboxWednesday").checked == true && document.getElementById("CheckboxThursday").checked == true && document.getElementById("CheckboxFriday").checked == true )
+        document.getElementById("weekdayOnly").checked = true;
+    else
+        document.getElementById("weekdayOnly").checked = false;
+    
+        
+    if (document.getElementById("CheckboxMonday").checked == true && document.getElementById("CheckboxTuesday").checked == true && document.getElementById("CheckboxWednesday").checked == true && document.getElementById("CheckboxThursday").checked == true && document.getElementById("CheckboxFriday").checked == true && document.getElementById("CheckboxSaturday").checked == true)
+        document.getElementById("timeALL").checked = true;
+    else
+        document.getElementById("timeALL").checked = false;
+    
+
 }
         
 function uncheck_all_option(source)
 {
     if(source.checked == false)
+    {
         document.getElementById(source.name).checked = false;
+        document.getElementById("timeALL").checked = false;
+        
+        if (source.className != "CheckboxSaturdays")  
+            document.getElementById("weekdayOnly").checked = false;
+
+        
+    }
     else
     {
         var checkboxes = document.getElementsByName(source.name);
@@ -29,11 +50,79 @@ function uncheck_all_option(source)
         }
         if(i == n)
             document.getElementById(source.name).checked = true;
+        
+            
+        const list_timeall =["CheckboxMondays", "CheckboxTuesdays", "CheckboxWednesdays", "CheckboxThursdays", "CheckboxFridays", "CheckboxSaturdays"]
+        var j ;    
+        for(j=0, n=list_timeall.length; j<n ;j++)
+        {
+            var checkboxes = document.getElementsByClassName(list_timeall[j]);
+            for(var k=0, m=checkboxes.length; k<m ;k++)
+            {
+                if(checkboxes[k].checked == false)
+                break;
+            }
+            if(k != m)
+                break;
+        }
+        if(j == n && k==m)
+            document.getElementById("timeALL").checked = true;
+        
+            
+        const list_weekday =["CheckboxMondays", "CheckboxTuesdays", "CheckboxWednesdays", "CheckboxThursdays", "CheckboxFridays"]
+        var a ;    
+        for(a=0, c=list_weekday.length; a<c ;a++)
+        {
+            var checkboxes = document.getElementsByClassName(list_weekday[a]);
+            for(var b=0, d=checkboxes.length; b<m ;b++)
+            {
+                if(checkboxes[b].checked == false)
+                break;
+            }
+            if(b != d)
+                break;
+        }
+        if(a == c && b==d)
+            document.getElementById("weekdayOnly").checked = true;
+        
+        
+            
+            
     }
 }
 
 
 
+function time_all(source)
+{
+    const list =["CheckboxMondays", "CheckboxTuesdays", "CheckboxWednesdays", "CheckboxThursdays", "CheckboxFridays", "CheckboxSaturdays"]
+    
+    for(var j=0, n=list.length; j<n ;j++)
+    {
+        var checkboxes = document.getElementsByClassName(list[j]);
+        for(var i=0, n=checkboxes.length; i<n ;i++)
+        {
+            checkboxes[i].checked = source.checked;
+        }
+    }
+    
+    document.getElementById("weekdayOnly").checked = source.checked;
+}
+
+
+function time_weekdayOnly(source)
+{
+    const list =["CheckboxMondays", "CheckboxTuesdays", "CheckboxWednesdays", "CheckboxThursdays", "CheckboxFridays"]
+    
+    for(var j=0, n=list.length; j<n ;j++)
+    {
+        var checkboxes = document.getElementsByClassName(list[j]);
+        for(var i=0, n=checkboxes.length; i<n ;i++)
+        {
+            checkboxes[i].checked = source.checked;
+        }
+    }
+}
 
 
 // function Search_Filter() {
