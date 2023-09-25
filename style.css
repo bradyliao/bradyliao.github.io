@@ -16,11 +16,11 @@
 
 #table_course {
   border-collapse: collapse;
-  width: 100%;
+  width:auto ;
   border: 1px solid #ddd;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
-  /* overflow-y: auto; */
+  white-space-collapse: collapse;
 }
 
 
@@ -29,17 +29,21 @@
     top: 0px; /* table head will be placed from the top of the table and sticks to it */
 }
 
-#table_course th {
+/* #table_course th {
   font-size: 14px;
-}
+} */
 
 
 
 #table_course th, #table_course td {
   text-align: left;
   padding: 5px;
+  table-layout: fixed;
 }
 
+table .table_memo {
+    max-width: 87rem;
+}
 
 
 
@@ -107,3 +111,4 @@
     width: 30px;
     display:inline-block ;
 }
+
